@@ -1,0 +1,24 @@
+---
+
+- hosts: group1
+  user: root
+  port: 22
+  gather_facts: True
+  roles:
+    - { role: rolehttpd, tags: httpd }
+
+- hosts: group2
+  user: root
+  port: 22
+  gather_facts: True
+  roles:
+    - { role: roleapache2, tags: apache2 }
+
+- hosts: all
+  user: root
+  port: 22
+  gather_facts: True
+  roles:
+    - { role: roleinsagent }
+
+

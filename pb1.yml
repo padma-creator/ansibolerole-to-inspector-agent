@@ -1,0 +1,10 @@
+---
+
+- hosts: all
+  user: root
+  port: 22
+  gather_facts: True
+  roles:
+    - { role: roleinsagent }
+
+
